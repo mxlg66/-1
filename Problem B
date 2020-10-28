@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<algorithm>
+int main() {
+    int n;
+    char c[300];
+    while (scanf("%d", &n) != EOF) {
+        while (n--) {
+            scanf("%s", c);
+            for (int i = 0; c[i]; i++) {
+                if ('A' <= c[i] && c[i] <= 'Z')
+                    c[i] += 32;
+            }
+            printf("%s\n", c);
+        }
+    }
+    return 0;
+}
